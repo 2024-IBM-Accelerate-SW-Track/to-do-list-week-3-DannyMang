@@ -37,6 +37,9 @@ class Home extends Component {
     // dealing with a larger data sensitive project.
     todo.id = Math.random();
     // Create a array that contains the current array and the new todo item
+    if (!todo.due || todo.due === "Invalid Date") {
+      return;
+    } 
     let new_list = [...this.state.todos, todo];
     // Update the local state with the new array.
     this.setState({

@@ -55,6 +55,7 @@ class AddTodo extends Component {
       <div>
         <TextField
           label="Add New Item"
+          id="new-item-input"
           variant="outlined"
           onChange={this.handleChange}
           value={this.state.content}
@@ -70,6 +71,7 @@ class AddTodo extends Component {
         </LocalizationProvider>
         <Button
           style={{ marginLeft: "10px" }}
+          id="new-item-button"
           onClick={this.handleSubmit}
           variant="contained"
           color="primary"
